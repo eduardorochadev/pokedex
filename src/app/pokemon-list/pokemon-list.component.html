@@ -1,0 +1,17 @@
+<header>
+  <h1>Pokedex</h1>
+  <h3>Feito copiado de todo canto, gerado por IA</h3>
+  <p>Total de pokemons: {{PokemonService.pokemons.length}}</p>
+</header>
+
+<div class="pokemon-list">
+  <app-pokemon-card
+  *ngFor="let pokemon of PokemonService.pokemons; index as i"
+  [pokemon]="formatarNome(pokemon.name)"
+  [numero]="i + 1"
+  ></app-pokemon-card>
+</div>
+
+
+
+
